@@ -37,4 +37,164 @@
     font-weight: 600;
   }
   .materia {
-    backg
+    background: #ffd6e8;
+    margin-bottom: 12px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(214, 51, 108, 0.15);
+    transition: background 0.3s ease;
+    position: relative;
+  }
+  .materia:hover {
+    background: #ffadd2;
+  }
+  .detalle {
+    display: none;
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #5a2e3e;
+    background: #ffe6f0;
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px rgba(166, 30, 77, 0.2);
+  }
+</style>
+</head>
+<body>
+
+<h1>Plan de Estudios Arquitectura FADU UBA</h1>
+
+<div class="malla">
+
+  <div class="anio">
+    <h2>CBC</h2>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Pensamiento Proyectual
+      <div class="detalle">Materia CBC común a diseño. Sin correlativas.</div>
+    </div>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Introducción al Conocimiento Proyectual
+      <div class="detalle">Base proyectual. Sin correlativas.</div>
+    </div>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Introducción al Conocimiento Científico
+      <div class="detalle">Formación teórica. Sin correlativas.</div>
+    </div>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Matemática
+      <div class="detalle">Base para estructuras. Sin correlativas.</div>
+    </div>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Física
+      <div class="detalle">Base para estructuras. Sin correlativas.</div>
+    </div>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Sociedad y Estado
+      <div class="detalle">Formación general. Sin correlativas.</div>
+    </div>
+  </div>
+
+  <div class="anio">
+    <h2>1° Año</h2>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Arquitectura 1
+      <div class="detalle">Carga horaria: 12hs. Correlativa: CBC aprobada.</div>
+    </div>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Construcciones 1
+      <div class="detalle">Carga horaria: 6hs. Correlativa: CBC aprobada.</div>
+    </div>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Introducción a los Estudios Históricos
+      <div class="detalle">Carga horaria: 4hs. Correlativa: CBC aprobada.</div>
+    </div>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Representación Arquitectónica
+      <div class="detalle">Carga horaria: 6hs. Correlativa: CBC aprobada.</div>
+    </div>
+  </div>
+
+  <div class="anio">
+    <h2>2° Año</h2>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Arquitectura 2
+      <div class="detalle">Carga horaria: 12hs. Correlativas: Arquitectura 1 y Construcciones 1.</div>
+    </div>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Construcciones 2
+      <div class="detalle">Carga horaria: 6hs. Correlativa: Construcciones 1.</div>
+    </div>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Historia 2
+      <div class="detalle">Carga horaria: 4hs. Correlativa: Historia 1.</div>
+    </div>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Instalaciones 1
+      <div class="detalle">Carga horaria: 4hs. Correlativa: Construcciones 1.</div>
+    </div>
+  </div>
+
+  <div class="anio">
+    <h2>3° Año</h2>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Arquitectura 3
+      <div class="detalle">Carga horaria: 12hs. Correlativas: Arquitectura 2 y Construcciones 2.</div>
+    </div>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Estructuras 1
+      <div class="detalle">Carga horaria: 6hs. Correlativa: Matemática.</div>
+    </div>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Construcciones 3
+      <div class="detalle">Carga horaria: 6hs. Correlativa: Construcciones 2.</div>
+    </div>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Instalaciones 2
+      <div class="detalle">Carga horaria: 4hs. Correlativa: Instalaciones 1.</div>
+    </div>
+  </div>
+
+  <div class="anio">
+    <h2>4° Año</h2>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Arquitectura 4
+      <div class="detalle">Carga horaria: 12hs. Correlativas: Arquitectura 3 y Estructuras 1.</div>
+    </div>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Planeamiento Urbano
+      <div class="detalle">Carga horaria: 6hs. Correlativa: Arquitectura 3.</div>
+    </div>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Legislación
+      <div class="detalle">Carga horaria: 4hs. Correlativa: Arquitectura 2.</div>
+    </div>
+  </div>
+
+  <div class="anio">
+    <h2>5° Año</h2>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Arquitectura 5
+      <div class="detalle">Carga horaria: 12hs. Correlativa: Arquitectura 4.</div>
+    </div>
+    <div class="materia" onclick="toggleDetalle(this)">
+      Proyecto Final
+      <div class="detalle">Carga horaria: 18hs. Correlativa: Arquitectura 5.</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function toggleDetalle(materia) {
+    const detalle = materia.querySelector('.detalle');
+    if(detalle.style.display === 'block') {
+      detalle.style.display = 'none';
+    } else {
+      detalle.style.display = 'block';
+    }
+  }
+</script>
+
+</body>
+</html>
