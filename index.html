@@ -1,84 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Malla Interactiva - Arquitectura FADU</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #f4f4f4;
-      margin: 0;
-      padding: 2rem;
-    }
-    h1 {
-      text-align: center;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 1rem;
-      max-width: 1200px;
-      margin: 2rem auto;
-    }
-    .materia {
-      background: white;
-      border-left: 5px solid #0066cc;
-      padding: 1rem;
-      cursor: pointer;
-      transition: all 0.2s;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .materia:hover {
-      background: #e0f0ff;
-      transform: scale(1.02);
-    }
-    .info {
-      text-align: center;
-      margin-top: 1rem;
-      font-size: 0.9rem;
-      color: #444;
-    }
-  </style>
-</head>
-<body>
-
-<h1>Malla Interactiva – Arquitectura FADU UBA</h1>
-
-<div class="grid" id="malla"></div>
-<div class="info" id="info">Haz clic en una materia para ver más información</div>
-
-<script>
-  const materias = [
-    { nombre: "Arquitectura 1", año: 1, cuat: "Anual", descripcion: "Taller proyectual inicial." },
-    { nombre: "Matemática", año: 1, cuat: "1er", descripcion: "Lógica, álgebra, geometría." },
-    { nombre: "Introducción a la Arquitectura", año: 1, cuat: "1er", descripcion: "Bases teóricas de la disciplina." },
-    { nombre: "Técnicas y Representación", año: 1, cuat: "2do", descripcion: "Dibujo, expresión gráfica." },
-    { nombre: "Construcciones 1", año: 2, cuat: "1er", descripcion: "Materiales y sistemas constructivos básicos." },
-    { nombre: "Historia 1", año: 2, cuat: "1er", descripcion: "Arquitectura antigua y medieval." },
-    { nombre: "Arquitectura 2", año: 2, cuat: "Anual", descripcion: "Taller proyectual intermedio." },
-    { nombre: "Instalaciones 1", año: 3, cuat: "1er", descripcion: "Sanitarias, eléctricas, etc." },
-    { nombre: "Estructuras 1", año: 3, cuat: "2do", descripcion: "Estructuras isostáticas." },
-    { nombre: "Construcciones 2", año: 3, cuat: "1er", descripcion: "Detalles constructivos complejos." },
-    { nombre: "Arquitectura 3", año: 3, cuat: "Anual", descripcion: "Taller proyectual avanzado." },
-    { nombre: "Legislación", año: 4, cuat: "2do", descripcion: "Normativa urbana y profesional." },
-    { nombre: "Planeamiento", año: 4, cuat: "1er", descripcion: "Ciudad, territorio, política." },
-    { nombre: "Arquitectura 4", año: 4, cuat: "Anual", descripcion: "Taller proyectual urbano." },
-    { nombre: "Arquitectura 5", año: 5, cuat: "Anual", descripcion: "Taller final integrador." },
-  ];
-
-  const malla = document.getElementById("malla");
-  const info = document.getElementById("info");
-
-  materias.forEach(m => {
-    const div = document.createElement("div");
-    div.className = "materia";
-    div.innerText = `${m.nombre} (${m.año}º año)`;
-    div.onclick = () => {
-      info.innerText = `${m.nombre} (${m.cuat} cuatrimestre): ${m.descripcion}`;
-    };
-    malla.appendChild(div);
-  });
-</script>
-
-</body>
-</html>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Malla Arquitectura FADU UBA - Estilo Aesthetic</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff0f6;
+    margin: 20px;
+    color: #333;
+  }
+  h1 {
+    text-align: center;
+    color: #d6336c;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  .malla {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .anio {
+    background: #ffe3ec;
+    border-radius: 12px;
+    padding: 15px 20px;
+    width: 220px;
+    box-shadow: 0 4px 8px rgba(214, 51, 108, 0.2);
+  }
+  .anio h2 {
+    color: #a61e4d;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 600;
+  }
+  .materia {
+    backg
